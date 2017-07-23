@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ECommerce.Data.Models.ORM
 {
-    public class Customer
+    public class Customer: BaseEntity
     {
         public string CustomerName { get; set; }
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ECommerce.Data.Models.ORM
 {
-    public class ProductImage
+    public class ProductImage : BaseEntity
     {
         [ForeignKey("ProductID")]
         public Product Product { get; set; }

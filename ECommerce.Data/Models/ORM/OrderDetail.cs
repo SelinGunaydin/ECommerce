@@ -17,7 +17,7 @@ namespace ECommerce.Data.Models.ORM
         public Product Product { get; set; }
 
         public int ProductID { get; set; }
-        7
+        
         [ForeignKey("OrderID")]
         public Order Order { get; set; }
 

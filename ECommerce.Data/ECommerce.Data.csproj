@@ -49,10 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ORM\AdminUser.cs" />
     <Compile Include="Models\ORM\BaseEntity.cs" />
     <Compile Include="Models\ORM\Category.cs" />
     <Compile Include="Models\ORM\Customer.cs" />
+    <Compile Include="Models\ORM\ECommerceContext.cs" />
     <Compile Include="Models\ORM\Order.cs" />
     <Compile Include="Models\ORM\OrderDetail.cs" />
     <Compile Include="Models\ORM\Product.cs" />
