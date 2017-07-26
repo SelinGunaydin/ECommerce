@@ -11,7 +11,7 @@ namespace ECommerce.Data.Models.ORM
     {
         public ECommerceContext()
         {
-            Database.Connection.ConnectionString = "Server=DESKTOP-2D1L3JM; Database=ECommerceData;Trusted_connection=true";
+            Database.Connection.ConnectionString = "Server=DESKTOP-2D1L3JM; Database=ECommerceDB;Trusted_connection=true";
         }
 
         public DbSet<Product> Products { get; set; }
