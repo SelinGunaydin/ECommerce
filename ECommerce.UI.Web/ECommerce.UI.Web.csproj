@@ -170,8 +170,9 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\AdminArea\AdminAreaAreaRegistration.cs" />
-    <Compile Include="Areas\AdminArea\Controllers\LoginController.cs" />
+    <Compile Include="Areas\AdminArea\Controllers\BaseController.cs" />
     <Compile Include="Areas\AdminArea\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\AdminArea\Controllers\LoginController.cs" />
     <Compile Include="Areas\AdminArea\Controllers\HomeController.cs" />
     <Compile Include="Areas\AdminArea\Models\LoginControl.cs" />
     <Compile Include="Global.asax.cs">
@@ -210,6 +211,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\AdminArea\Views\Base\" />
+    <Folder Include="Areas\AdminArea\Views\Category\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\VM\" />
     <Folder Include="obj\Debug\TempPE\" />
