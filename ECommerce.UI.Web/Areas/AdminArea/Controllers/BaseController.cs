@@ -1,5 +1,6 @@
 ﻿using ECommerce.Business.RepositoryManager;
 using ECommerce.Data.Models.ORM;
+using ECommerce.UI.Web.Models.VM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace ECommerce.UI.Web.Areas.AdminArea.Controllers
         public Repository<OrderDetail> rporderdetail;
         public Repository<ProductImage> rpproimage;
         public Repository<Supplier> rpsupplier;
+        //public Repository<CategoryVM> rpcategoryvm;
 
         public BaseController()
         {
@@ -27,6 +29,7 @@ namespace ECommerce.UI.Web.Areas.AdminArea.Controllers
             rporderdetail = new Repository<OrderDetail>();
             rpproimage = new Repository<ProductImage>();
             rpsupplier = new Repository<Supplier>();
+            //rpcategoryvm = new Repository<CategoryVM>() ;
         }
     }
 }

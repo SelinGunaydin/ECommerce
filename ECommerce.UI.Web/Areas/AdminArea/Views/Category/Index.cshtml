@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/AdminArea/Views/Shared/SiteLayout.cshtml";
+}
+@model ECommerce.UI.Web.Models.VM.CategoryVM
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1 class="page-header"></h1>
+        </div>
+ 
+    </div>
+    @using (Html.BeginForm("Index", "Category", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Add Category
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })                                
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        @Html.TextAreaFor(x => x.Description, new { @class = "form-control " })                              
+                                    </div>               
+                                    <input type="submit" class="btn btn-default" value="Add">
+                                    @*<button type="reset" class="btn btn-default">Reset</button>*@
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+        </div>
+    } 
+</div>
+

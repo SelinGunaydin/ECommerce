@@ -11,12 +11,12 @@ namespace ECommerce.UI.Web.Areas.AdminArea.Controllers
     public class LoginController : Controller
     {
         ECommerceContext db = new ECommerceContext();
-        public ActionResult Index()
+        public ActionResult Login()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Index(AdminUser adminuser)
+        public ActionResult Login(AdminUser adminuser)
         {
             if (ModelState.IsValid)
             {
@@ -35,6 +35,26 @@ namespace ECommerce.UI.Web.Areas.AdminArea.Controllers
             {
                 return View();
             }
+        }
+
+        //[Authorize]
+        public ActionResult LogOut()
+        {
+            Session.Abandon();
+            Session.Clear();
+            Session.RemoveAll();
+
+            FormsAuthentication.SignOut();
+
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.Now);
+
+            //return View();
+            //Session.Clear();
+
+            //FormsAuthentication.SignOut();
+
+            return RedirectToAction("Login", "Login");
         }
     }
 }

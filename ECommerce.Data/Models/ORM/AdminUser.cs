@@ -13,11 +13,11 @@ namespace ECommerce.Data.Models.ORM
 
         public string Surname { get; set; }
 
-        [Required(ErrorMessage = "Lütfen mail adresinizi giriniz.")]
+        [Required(ErrorMessage = "*Lütfen mail adresinizi giriniz.")]
         [Display(Name = "E-Mail")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Lütfen şifrenizi giriniz.")]
+        [Required(ErrorMessage = "*Lütfen şifrenizi giriniz.")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
     }

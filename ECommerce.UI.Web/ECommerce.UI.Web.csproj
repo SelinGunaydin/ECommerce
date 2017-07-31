@@ -172,12 +172,22 @@
     <Compile Include="Areas\AdminArea\AdminAreaAreaRegistration.cs" />
     <Compile Include="Areas\AdminArea\Controllers\BaseController.cs" />
     <Compile Include="Areas\AdminArea\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\AdminArea\Controllers\CustomerController.cs" />
     <Compile Include="Areas\AdminArea\Controllers\LoginController.cs" />
     <Compile Include="Areas\AdminArea\Controllers\HomeController.cs" />
+    <Compile Include="Areas\AdminArea\Controllers\ProductController.cs" />
     <Compile Include="Areas\AdminArea\Models\LoginControl.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\VM\BaseEntityVM.cs" />
+    <Compile Include="Models\VM\CategoryVM.cs" />
+    <Compile Include="Models\VM\CustomerVM.cs" />
+    <Compile Include="Models\VM\OrderDetailVM.cs" />
+    <Compile Include="Models\VM\OrderVM.cs" />
+    <Compile Include="Models\VM\ProductImageVM.cs" />
+    <Compile Include="Models\VM\ProductVM.cs" />
+    <Compile Include="Models\VM\SupplierVM.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -200,8 +210,11 @@
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\AdminArea\Views\Category\Index.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Customer\Add.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Product\Add.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Login\Login.cshtml" />
     <Content Include="Areas\AdminArea\Views\Home\Index.cshtml" />
-    <Content Include="Areas\AdminArea\Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -212,9 +225,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AdminArea\Views\Base\" />
-    <Folder Include="Areas\AdminArea\Views\Category\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\VM\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>

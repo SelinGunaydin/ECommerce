@@ -48,22 +48,42 @@ namespace ECommerce.Business.RepositoryManager
                 return true;
             return false;
         }
-        public bool Delete(T entity)
-        {
-            var query = dbSet.Remove(entity);
+        //public bool Delete(T entity)
+        //{
+        //    var query = dbSet.Remove(entity);
 
-            if (query != null)
-                return true;
-            return false;
-        }
-        public bool Delete(Guid id)
-        {
-            var query = dbSet.Remove(dbSet.Find(id));
+        //    if (query != null)
+        //        return true;
+        //    return false;
+        //}
 
-            if (query != null)
-                return true;
-            return false;
-        }
+        //public void Delete(T entity)
+        //{
+        //    if (entity.GetType().GetProperty("IsDelete") != null)
+        //    {
+        //        T _entity = entity;
+
+        //        _entity.GetType().GetProperty("IsDelete").SetValue(_entity, true);
+
+        //        this.Update(_entity);
+        //    }
+        //    else
+        //    {
+        //        // Önce entity'nin state'ini kontrol etmeliyiz.
+        //        ECommerceContext dbECommerce = dbSet.Entry(entity);
+
+        //        if (ECommerceContext.State != EntityState.Deleted)
+        //        {
+        //            ECommerceContexty.State = EntityState.Deleted;
+        //        }
+        //        else
+        //        {
+        //            dbSet.Attach(entity);
+        //            dbSet.Remove(entity);
+        //        }
+        //    }
+
+        //}
         public T GetById(Guid id)
         {
             var query = dbSet.Find(id);
